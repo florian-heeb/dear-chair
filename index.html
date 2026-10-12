@@ -1619,7 +1619,6 @@ body { box-sizing: border-box; padding: 10px; background: var(--stripe), var(--s
           <svg class="pc-art" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 35.5 H36" class="ax"/><polyline points="5,31 12,24.5 18,27.5 26,17.5" class="ln"/><path d="M24.5 19.5 C23.5 9.5 30.5 4.5 37 3 C38 12 33.5 18.5 24.5 19.5 Z" class="lf"/><path d="M25.6 18.4 C28.8 13.8 32 9.4 35.6 5.2" class="rib"/></svg>
         </span>
       </a>
-      <p class="lead">Thoughts, doubts or ideas for the next experiment? We would love to hear them.</p>
       <div class="links"><a href="https://aspredicted.org/Y7C_T4H" target="_blank" rel="noopener">The preregistration on AsPredicted</a></div>
       <p class="foot">Florian Heeb (SAFE, Goethe University Frankfurt, MIT Sloan) and Julian F. K&ouml;lbel (University of St. Gallen, Swiss Finance Institute, MIT Sloan). Numbers from the current draft. This page was built with Claude Code and <a href="https://github.com/nityeshaga/claude-home-base/tree/main/plugins/creative/skills/explorable-explanations" target="_blank" rel="noopener">the explorable-explanations skill by Nityesh Agarwal</a> (MIT License), in the spirit of <a href="https://ncase.me/trust/" target="_blank" rel="noopener">Nicky Case&rsquo;s explorable explanations</a>.</p>
     </div>
@@ -2334,7 +2333,7 @@ PLAYS['write-back'] = st => {
   ta.addEventListener('input', () => { try { localStorage.setItem(DRAFT, ta.value); } catch (e) { /* storage blocked */ } });
   const offline = () => {
     form.classList.add('off'); ta.hidden = true; $('.wb-sign', st).hidden = true; $('.wb-off', st).hidden = false;
-    btn.hidden = true; note.innerHTML = '<a class="btn" href="' + SSRN + '" target="_blank" rel="noopener">Open the paper &#8599;</a>';
+    $('.aero-foot', st).hidden = true;
   };
   const showDone = (d, fresh) => {
     form.hidden = true; done.hidden = false;
